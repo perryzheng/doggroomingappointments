@@ -17,7 +17,8 @@ object Application extends Controller {
     RelativisticModel.select()
     val m = Amount.valueOf("12 GeV").to(KILOGRAM)
     val testRelativity = s"E=mc^2: 12 GeV = $m"
-    Ok(views.html.index(testRelativity))
+    val stuff = "hello world"
+    Ok(views.html.index(stuff))
     //Ok(views.html.index(null))
   }
 

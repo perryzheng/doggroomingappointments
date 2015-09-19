@@ -1,55 +1,216 @@
 @(message: String)
 
 @main("GettingStarted") {
-
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="@routes.Assets.at("images/lang-logo.png")">
-    </a>
-    <h1>Getting Started with Scala/Play on Heroku</h1>
-    <p>This is a sample Play application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-scala"><span class="glyphicon glyphicon-flash"></span> Getting Started with Scala/Play</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/scala-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
-<div class="container">
-  @if(message != null){
-  <div class="alert alert-success text-center" role="alert">
-    @message
-  </div>
-  }
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-scala" class="alert-link">Getting Started with Scala/Play on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/scala-getting-started">Heroku Button</a> on the repository.</li>
-
-        <li>When Heroku received the source code, it grabbed all the dependencies in the <a href="https://github.com/heroku/scala-getting-started/blob/master/build.sbt">build.sbt</a>.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-        <li>Check out the <a href="https://devcenter.heroku.com/articles/getting-started-with-scala">Getting Started</a> guide to learn more!</li>
-      </ul>
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>Book your next dog appointment here</h1>
+            <hr>
+            <p>We are committed to paying attention to details.
+                Leave a simple note, we will help you book your next dog appointment.</p>
+            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+        </div>
     </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-scala">Getting Started with Scala/Play on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/deploying-scala">Deploying Scala Apps on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/play-support">Heroku Play Framework Support</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/scala-support">Heroku Scala Support</a></li>
-      </ul>
-    </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
-  </div>
-</div>
+</header>
 
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">We give you a piece of mind</h2>
+                <hr class="light">
+                <p class="text-faded">
+                    We are committed to paying attention to details. We will remember your dog's name,
+                    what she likes and doesn't like, what services you usually get, your time preferences,
+                    so you don't have to repeat the same thing over and over again to your dog groomers.
+                </p>
+                <a href="#" class="btn btn-default btn-xl">Get Started!</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">At Your Service</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+                    <h3>Piece of mind</h3>
+                    <p class="text-muted">We make sure your appointment is scheduled and we'll send you a calendar invite once it's done</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                    <h3>Don't repeat yourself</h3>
+                    <p class="text-muted">We remember all your dog's and your preferences so you don't have to repeat the same thing to your dog groomers</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                    <h3>Don't spend time on the phone</h3>
+                    <p class="text-muted">We do all the callings for you so you don't have to spend 10 minutes on the phone</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                    <h3>It gets faster every time</h3>
+                    <p class="text-muted">The more you use us, the better we get at predicting what you want</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="no-padding" id="portfolio">
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="@routes.Assets.at("images/google_calendar.png")" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                You get a calendar invite with address, phone number and yelp link
+                            </div>
+                            <div class="project-name">
+                                On the day you are about to drive to your dog groomer's place, you aren't struggling to find groomer's info
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="@routes.Assets.at("images/yelp_search.png")" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                We do the research for you
+                            </div>
+                            <div class="project-name">
+                                We pick only the best ones on Yelp or the one you like
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="@routes.Assets.at("images/how_to_make_a_task.png")" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                You simply type your task in a simple message
+                            </div>
+                            <div class="project-name">
+                                You don't have to be tech savvy to use this!
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="@routes.Assets.at("images/it_gets_easier_everytime.png")" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                It gets even easier the second time you book it
+                            </div>
+                            <div class="project-name">
+                                One sentence, and you're good to go! We already remember your and your dog's preferences
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="@routes.Assets.at("images/happy_you.jpg")" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Now you are happy
+                            </div>
+                            <div class="project-name">
+                                No waiting on the phone, no reading yelp descriptions, no noisy backgrounds, no rude customer service.
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="@routes.Assets.at("images/happy_dog.jpg")" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Your dog is all happy too because you are happy
+                            </div>
+                            <div class="project-name">
+                                Look at that happy face!
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<aside class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2>Book your next dog grooming appointment</h2>
+            <a href="#" class="btn btn-default btn-xl wow tada">Schedule Now!</a>
+        </div>
+    </div>
+</aside>
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Let's Get In Touch!</h2>
+                <hr class="primary">
+                <p>We are here to help simplify your life so you don't have to spend time on the phone and repeat the same preferences to your dog groomers.
+                    Send us an email on how to improve.</p>
+            </div>
+            <div class="col-lg-4 col-lg-offset-2 text-center">
+                <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                <p>917-518-5151</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <p><a href="mailto:feedback@("@getagnow.com")">feedback@("@getagnow.com")</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="@routes.Assets.at("javascripts/jquery.easing.min.js")"></script>
+<script src="@routes.Assets.at("javascripts/js/jquery.fittext.js")"></script>
+<script src="@routes.Assets.at("javascripts/wow.min.js")"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="@routes.Assets.at("javascripts/creative.js")"></script>
 }
